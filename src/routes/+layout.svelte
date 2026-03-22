@@ -4,6 +4,7 @@
   import { browser } from '$app/environment';
   import { HugeiconsIcon } from '@hugeicons/svelte';
   import { CheckListIcon, Moon02Icon, Sun01Icon } from '@hugeicons/core-free-icons';
+  import { Toaster } from '$lib/components/ui/sonner';
 
   let { children } = $props();
 
@@ -42,7 +43,7 @@
       <span class="brand-icon" aria-hidden="true">
         <HugeiconsIcon icon={CheckListIcon} size={18} strokeWidth={1.8} />
       </span>
-      Опросник из книги Джеффри. Я.  
+      Опросник по ловушкам
     </a>
 
     <div class="theme-switcher" aria-label="Переключение темы">
@@ -62,6 +63,12 @@
   </header>
 
   <main class="page-content">
+    <Toaster />
     {@render children()}
   </main>
+
+  <footer class="layout-footer">
+    <p>Designed by Ilyas Qalandarzoda</p>
+    <a href="https://t.me/awaitable" target="_blank" rel="noreferrer">@awaitable</a>
+  </footer>
 </div>
