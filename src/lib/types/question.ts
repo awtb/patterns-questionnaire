@@ -11,8 +11,22 @@ export type SchemaKey =
   | 'unrelenting_standards'
   | 'entitlement';
 
+export type AnswerValue = 1 | 2 | 3 | 4 | 5 | 6;
+
 export type Question = {
   id: number;
   text: string;
   schemaKey: SchemaKey;
 };
+
+export type QuestionAnswer = {
+  childhood: AnswerValue;
+  current: AnswerValue;
+};
+
+export enum SchemaFlag {
+  None = 'none',
+  Potential = 'potential',
+  Expressed = 'expressed',
+  StronglyExpressed = 'strongly_expressed'
+}
