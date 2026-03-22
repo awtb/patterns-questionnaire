@@ -1,4 +1,5 @@
 <script lang="ts">
+  import { base } from "$app/paths";
   import { Button } from "$lib/components/ui/button/index.js";
   import { questions } from "$lib/data/questions";
 
@@ -48,7 +49,7 @@
 
     <div class="flex flex-wrap justify-center gap-3">
       <Button
-        href="/questionnaire"
+        href={`${base}/questionnaire`}
         size="lg"
         class="h-10 px-4 text-sm sm:h-11 sm:px-5 sm:text-base"
       >

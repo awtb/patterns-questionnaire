@@ -1,4 +1,5 @@
 <script lang="ts">
+  import { base } from '$app/paths';
   import QuestionnaireResults from '$lib/components/QuestionnaireResults.svelte';
   import { Button } from '$lib/components/ui/button/index.js';
   import { questionnaireResult } from '$lib/stores/questionnaire';
@@ -15,7 +16,7 @@
       </p>
 
       <div class="mt-2 flex flex-wrap gap-3">
-        <Button href="/questionnaire" size="lg" class="h-10 px-4 text-sm sm:h-11 sm:px-5 sm:text-base">
+        <Button href={`${base}/questionnaire`} size="lg" class="h-10 px-4 text-sm sm:h-11 sm:px-5 sm:text-base">
           Перейти к опроснику
         </Button>
       </div>

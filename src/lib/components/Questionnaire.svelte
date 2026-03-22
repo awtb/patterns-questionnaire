@@ -1,6 +1,7 @@
 <script lang="ts">
   import type { AnswerScaleValue } from '$lib/components/AnswerScale.svelte';
   import { goto } from '$app/navigation';
+  import { base } from '$app/paths';
   import QuestionCard from '$lib/components/QuestionCard.svelte';
   import { Button } from '$lib/components/ui/button/index.js';
   import { Progress } from '$lib/components/ui/progress/index.js';
@@ -62,7 +63,7 @@
         } as Record<number, QuestionAnswer>
       });
 
-      goto('/results');
+      goto(`${base}/results`);
       return;
     }
 

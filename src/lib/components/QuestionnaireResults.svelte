@@ -1,4 +1,5 @@
 <script lang="ts">
+  import { base } from '$app/paths';
   import { Alert02Icon, CheckmarkCircle02Icon, Fire02Icon, InformationCircleIcon } from '@hugeicons/core-free-icons';
   import { HugeiconsIcon } from '@hugeicons/svelte';
   import { Badge } from '$lib/components/ui/badge/index.js';
@@ -200,10 +201,10 @@
   </div>
 
   <div class="flex flex-wrap gap-3">
-    <Button href="/questionnaire" variant="outline" size="lg" class="h-10 px-4 text-sm sm:h-11 sm:px-5 sm:text-base">
+    <Button href={`${base}/questionnaire`} variant="outline" size="lg" class="h-10 px-4 text-sm sm:h-11 sm:px-5 sm:text-base">
       Пройти ещё раз
     </Button>
-    <Button href="/" size="lg" class="h-10 px-4 text-sm sm:h-11 sm:px-5 sm:text-base">
+    <Button href={`${base}/`} size="lg" class="h-10 px-4 text-sm sm:h-11 sm:px-5 sm:text-base">
       На главную
     </Button>
   </div>

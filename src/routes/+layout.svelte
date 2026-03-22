@@ -1,4 +1,5 @@
 <script lang="ts">
+  import { base } from '$app/paths';
   import './layout.css';
   import favicon from '$lib/assets/favicon.svg';
   import { browser } from '$app/environment';
@@ -39,7 +40,7 @@
 
 <div class="app-shell">
   <header class="navbar">
-    <a class="brand" href="/">
+    <a class="brand" href={`${base}/`}>
       <span class="brand-icon" aria-hidden="true">
         <HugeiconsIcon icon={CheckListIcon} size={18} strokeWidth={1.8} />
       </span>
