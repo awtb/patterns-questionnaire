@@ -1,8 +1,12 @@
-# Patterns Questionnaire
+# Patterns Questionnaire ✨
 
 A small static questionnaire for exploring patterns formed in childhood and how they may show up in the present.
 
-## Features
+## Live Demo 🌐
+
+[Open GitHub Pages](https://awtb.github.io/patterns-questionnaire/)
+
+## Features 📋
 
 - 22 statements
 - 2 answers for each statement:
@@ -11,14 +15,14 @@ A small static questionnaire for exploring patterns formed in childhood and how 
 - automatic scoring across 11 pattern groups
 - simple results page with ranked scores
 
-## Tech Stack
+## Tech Stack 🛠️
 
 - SvelteKit
 - TypeScript
 - Tailwind CSS
 - shadcn-svelte
 
-## Development
+## Development 💻
 
 ```bash
 pnpm install
