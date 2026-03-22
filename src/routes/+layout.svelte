@@ -10,8 +10,8 @@
   type ThemeMode = 'light' | 'dark';
 
   const themeOptions: Array<{ value: ThemeMode; label: string; icon: typeof Sun01Icon }> = [
-    { value: 'light', label: 'Light', icon: Sun01Icon },
-    { value: 'dark', label: 'Dark', icon: Moon02Icon }
+    { value: 'light', label: 'Светлая тема', icon: Sun01Icon },
+    { value: 'dark', label: 'Тёмная тема', icon: Moon02Icon }
   ];
 
   let theme = $state<ThemeMode>('light');
@@ -32,7 +32,7 @@
 </script>
 
 <svelte:head>
-  <title>Schema Questionnaire</title>
+  <title>Опросник</title>
   <link rel="icon" href={favicon} />
 </svelte:head>
 
@@ -45,7 +45,7 @@
       Опросник из книги Джеффри. Я.  
     </a>
 
-    <div class="theme-switcher" aria-label="Theme switcher">
+    <div class="theme-switcher" aria-label="Переключение темы">
       {#each themeOptions as option}
         <button
           type="button"
