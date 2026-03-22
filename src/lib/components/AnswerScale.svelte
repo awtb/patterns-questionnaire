@@ -1,12 +1,13 @@
 <script lang="ts">
   import { Button } from '$lib/components/ui/button/index.js';
+  import type { AnswerValue } from '$lib/types/question';
 
-  export type AnswerScaleValue = 1 | 2 | 3 | 4 | 5 | 6 | null;
+  export type AnswerScaleValue = AnswerValue | null;
 
   type Props = {
     label: string;
     value: AnswerScaleValue;
-    onChange: (value: Exclude<AnswerScaleValue, null>) => void;
+    onChange: (value: AnswerValue) => void;
   };
 
   let { label, value, onChange }: Props = $props();
