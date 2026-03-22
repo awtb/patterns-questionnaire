@@ -3,11 +3,23 @@
   import { Badge } from '$lib/components/ui/badge/index.js';
   import type { Question } from '$lib/types/question';
 
-  let { question, current = 1, total = 1 }:
-    { question: Question; current?: number; total?: number } = $props();
-
-  let childhoodAnswer = $state<AnswerScaleValue>(null);
-  let currentAnswer = $state<AnswerScaleValue>(null);
+  let {
+    question,
+    current = 1,
+    total = 1,
+    childhoodAnswer = null,
+    currentAnswer = null,
+    onChildhoodAnswerChange,
+    onCurrentAnswerChange
+  }: {
+    question: Question;
+    current?: number;
+    total?: number;
+    childhoodAnswer?: AnswerScaleValue;
+    currentAnswer?: AnswerScaleValue;
+    onChildhoodAnswerChange: (value: Exclude<AnswerScaleValue, null>) => void;
+    onCurrentAnswerChange: (value: Exclude<AnswerScaleValue, null>) => void;
+  } = $props();
 
   const schemaLabels: Record<Question['schemaKey'], string> = {
     abandonment: 'Покинутость',
@@ -46,12 +58,12 @@
     <AnswerScale
       label="В детстве"
       value={childhoodAnswer}
-      onChange={(value) => (childhoodAnswer = value)}
+      onChange={onChildhoodAnswerChange}
     />
     <AnswerScale
       label="Сейчас"
       value={currentAnswer}
-      onChange={(value) => (currentAnswer = value)}
+      onChange={onCurrentAnswerChange}
     />
   </div>
 </article>
