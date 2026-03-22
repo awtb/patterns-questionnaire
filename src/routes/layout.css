@@ -205,6 +205,36 @@
   padding: 2rem 1.5rem;
 }
 
+.layout-footer {
+  padding: 0 1.5rem 1.5rem;
+  text-align: center;
+}
+
+.layout-footer a,
+.layout-footer p {
+  color: var(--muted-foreground);
+  font-family: inherit;
+  font-size: 0.9rem;
+  font-weight: 400;
+  letter-spacing: 0;
+  text-transform: none;
+}
+
+.layout-footer p {
+  margin: 0;
+}
+
+.layout-footer a {
+  display: inline-block;
+  margin-top: 0.35rem;
+  color: color-mix(in srgb, var(--muted-foreground) 78%, transparent);
+  font-size: 0.82rem;
+}
+
+.layout-footer a:hover {
+  color: var(--muted-foreground);
+}
+
 :global(.page-content h1) {
   margin: 0;
   font-size: 2rem;
@@ -218,5 +248,9 @@
 
   .page-content {
     padding: 1.5rem 1rem;
+  }
+
+  .layout-footer {
+    padding: 0 1rem 1rem;
   }
 }
