@@ -15,7 +15,7 @@ To recreate this project with the same configuration:
 
 ```sh
 # recreate this project
-pnpm dlx sv@0.12.8 create --template minimal --types ts --add tailwindcss="plugins:none" --install pnpm schema-questionnaire
+pnpm dlx sv@0.12.8 create --template minimal --types ts --add tailwindcss="plugins:none" --install pnpm patterns-questionnaire
 ```
 
 ## Developing
